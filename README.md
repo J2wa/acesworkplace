@@ -1,6 +1,8 @@
-# Aces Intelligence Workhub
+# ACES Workplace
 
-White-and-blue task and time tracking for annotation teams, with Asia/Manila dates. The website opens on sign-in. Employees see their own assigned work; administrators manage projects, people, reviews, reports and payroll. Sign out is available in the top bar and Settings.
+Task and time tracking for ACES annotation teams, with Asia/Manila dates. Employees sign in to complete contract onboarding, see assigned work, and submit tasks and time. Administrators manage assignments, contracts, reviews, reports, and payroll.
+
+Production is [workplace.acesintelligence.xyz](https://workplace.acesintelligence.xyz). The source of record is [J2wa/acesworkplace](https://github.com/J2wa/acesworkplace).
 
 ## Stack and data model
 
@@ -33,7 +35,7 @@ Passwords are salted and hashed. Sessions expire after 30 minutes idle or 12 hou
 
 ## Vercel deployment
 
-See [deployment instructions](docs/VERCEL_MIGRATION.md). Required production variables are APP_URL, TURSO_DATABASE_URL, TURSO_AUTH_TOKEN, ADMIN_EMAIL, ADMIN_NAME and ADMIN_PASSWORD_HASH. Google login additionally requires GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET. These are server secrets: never prefix them with NEXT_PUBLIC_.
+The existing Vercel project is `aces-intelligence-workhub` in the `aces-intelligence` team. Use the repository root, `main`, the Next.js preset, and Node.js 24. See the [deployment instructions](docs/VERCEL_MIGRATION.md) for database migrations, OAuth setup, Google Sheets, and smoke checks. Required production variables are APP_URL, TURSO_DATABASE_URL, TURSO_AUTH_TOKEN, ADMIN_EMAIL, ADMIN_NAME and ADMIN_PASSWORD_HASH. Google login additionally requires GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET. These are server secrets: never prefix them with NEXT_PUBLIC_.
 
 ## Seed and checks
 
